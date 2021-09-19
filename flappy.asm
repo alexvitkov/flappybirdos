@@ -2,7 +2,7 @@ org 0x7c00
 bits 16
 
 PIPE_WIDTH EQU 6
-PIPE_HOLE EQU 6
+PIPE_HOLE EQU 8
 FLAPPY_X EQU 20
 
 DIST EQU 30
@@ -41,7 +41,7 @@ DrawSky:
 NextFrame:
     ; sleep for 33 miliseconds (game runs at 30FPS)
     mov CX, 0
-	mov DX, 0xc000
+	mov DX, 0x9000
 	mov AH, 0x86
 	int 0x15
 
